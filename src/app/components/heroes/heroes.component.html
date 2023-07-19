@@ -1,0 +1,20 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col animated fadeIn fast" *ngFor="let rutas of ruta; let i = index;">
+        <div class="card h-100">
+
+            <div class="card-body">
+                <h5 class="card-title">{{rutas.ciudad_or}}</h5>
+                <p class="card-text">{{rutas.ciudad_dest}}</p>
+                <p class="card-text">{{rutas.descrip}}</p>
+                <p class="card-text">{{rutas.precio_ru}}</p>
+                <p class="card-text">{{rutas.tipo}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{rutas.precio_ru}}</small>
+            </div>
+            <div class="d-grip gap-2 col-6 mx-auto">
+                <button (click)="verRutas(i)" type="button" class="btn btn-outline-dark">Ver más</button>
+            </div>
+        </div>
+    </div>
+</div>

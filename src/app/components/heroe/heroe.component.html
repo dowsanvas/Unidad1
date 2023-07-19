@@ -1,0 +1,22 @@
+<h1>{{heroe.ciudad_or}} <small>{{heroe.ciudad_dest}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img img [src]="heroe.img " class="img-fluid rounded-start " alt="... ">
+        <br><br>
+        <a href="heroes" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+
+
+        <h3>{{heroe.ciudad_or}}</h3>
+        <hr>
+        <p>
+            {{heroe.ciudad_dest}}
+            <br> {{heroe.precio_ru}}
+            <br> {{heroe.descrip}} {{heroe.tipo}}
+        </p>
+        <div>
+            <img *ngIf="heroe.descrip== 'Externo' " src="" width="200" alt="">
+            <img *ngIf="heroe.descrip == 'Interno' " src="" alt="">
+        </div>
